@@ -1,0 +1,44 @@
+name: SonarCloud Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - develop  # Trigger analysis for overall project statistics after merging
+  pull_request:
+    branches:
+      - main
+      - develop  # Trigger analysis for PRs before merging into develop or main
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth: 0 is required. SonarCloud needs the full commit history 
+          # to analyze "New Code" in Pull Requests properly.
+          fetch-depth: 0  
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify the Node.js version used in your project
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Testing step. Uncomment if you have configured the generation of coverage/lcov.info
+      # - name: Run tests and generate coverage report
+      #   run: npm run test -- --no-watch --code-coverage
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          # GITHUB_TOKEN is provided automatically by GitHub Actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # SONAR_TOKEN must be added in repository Settings -> Secrets and variables -> Actions
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
