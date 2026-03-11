@@ -58,4 +58,38 @@ describe('LanguageService', () => {
 
     expect(service.currentLanguage()).toBe(LanguageCode.RU);
   });
+
+  describe('Server Side Environment', () => {
+    beforeEach(() => {
+      // Для тестов сервера нам нужно сбросить модуль и подменить платформу
+      TestBed.resetTestingModule();
+      TestBed.configureTestingModule({
+        providers: [
+          provideTranslateService(),
+          LanguageService,
+          { provide: PLATFORM_ID, useValue: 'server' }
+        ]
+      });
+      translate = TestBed.inject(TranslateService);
+      spyOn(translate, 'use').and.returnValue(of({}));
+    });
+
+    it('should always return RU when on server platform', () => {
+      // Предварительно кладем EN в сторадж, но на сервере он должен игнорироваться
+      localStorage.setItem(STORAGE_KEY, LanguageCode.EN);
+      
+      const service = TestBed.inject(LanguageService);
+      
+      expect(service.currentLanguage()).toBe(LanguageCode.RU);
+    });
+
+    it('should not attempt to save to localStorage when on server platform', () => {
+      const service = TestBed.inject(LanguageService);
+      const storageSpy = spyOn(localStorage, 'setItem');
+      
+      service.switchLanguage(LanguageCode.EN);
+      
+      expect(storageSpy).not.toHaveBeenCalled();
+    });
+  });
 });
