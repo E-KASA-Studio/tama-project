@@ -7,7 +7,6 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, HeroComponent],
-  imports: [RouterOutlet, NavbarComponent, TranslatePipe],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
