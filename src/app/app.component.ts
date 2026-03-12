@@ -3,6 +3,7 @@ import { HeroComponent } from './features/sections/hero/hero.component';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 <<<<<<< HEAD
+import { HeroComponent } from "./features/sections/hero/hero.component";
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
@@ -15,6 +16,7 @@ import { HeroComponent } from "./features/sections/hero/hero.component";
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, HeroComponent],
 >>>>>>> 162abd0 (feat: import HeroComponent)
+  imports: [RouterOutlet, NavbarComponent, HeroComponent],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
