@@ -20,16 +20,4 @@ export class NavbarComponent {
     this.isMenuOpen.set(false);
   }
 
-  setLanguage(lang: 'en' | 'ru') {
-    this.currentLanguage.set(lang);
-    this.closeMenu();
-  }
-
-  scrollToSection(sectionId: string) {
-    this.closeMenu();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
 }
