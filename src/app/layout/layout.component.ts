@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { LandingPageComponent } from '../features/landing-page/landing-page.component';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet, NavbarComponent, FooterComponent],
+  imports: [NavbarComponent, FooterComponent, LandingPageComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })

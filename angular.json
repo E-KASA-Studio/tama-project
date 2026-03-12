@@ -25,7 +25,11 @@
                 "glob": "**/*",
                 "input": "public"
               },
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "i18n",
+                "output": "i18n"
+              }
             ],
             "styles": [
               "src/styles.css"
