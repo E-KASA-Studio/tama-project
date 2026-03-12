@@ -32,8 +32,8 @@ jobs:
         run: npm ci --ignore-scripts
 
       # Testing step. Uncomment if you have configured the generation of coverage/lcov.info
-      # - name: Run tests and generate coverage report
-      #   run: npm run test -- --no-watch --code-coverage
+      - name: Run tests and generate coverage report
+        run: npm run test -- --no-watch --code-coverage --browsers=ChromeHeadless
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@a31c9398be7ace6bbfaf30c0bd5d415f843d45e9 #7.0.0
