@@ -1,3 +1,8 @@
+### [tama-project-3.0.0-RELEASE] - 2026-03-12
+
+### Added 
+- Added a navigation bar in accordance to the Figma styles
+
 ### [tama-project-2.0.0-RELEASE] - 2026-03-11
 
 ### Added 
