@@ -1,4 +1,4 @@
-### [tama-project-1.0.0-RELEASE] - 2026-03-11
+### [tama-project-2.0.0-RELEASE] - 2026-03-11
 
 ### Added 
 - Implement business logic to switch languages (Github Project[#25], PR [#28])
