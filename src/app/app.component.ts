@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { HeroComponent } from './features/sections/hero/hero.component';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './layout/navbar/navbar.component';
-import { TranslateService, TranslatePipe  } from '@ngx-translate/core';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
