@@ -14,9 +14,6 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 export class AppComponent {
   translate = inject(TranslateService);
-  constructor() {
-    this.translate.setDefaultLang('ru');
-    this.translate.use('ru');
-  }
+
   title = 'tama-project';
 }
