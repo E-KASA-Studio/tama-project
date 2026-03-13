@@ -1,3 +1,9 @@
+### [tama-project-2.1.0-RELEASE] - 2026-03-13
+
+### Added 
+- Update hero section as per figma styles (Github Project[#15], PR [#31])
+
+
 ### [tama-project-2.0.0-RELEASE] - 2026-03-11
 
 ### Added 

@@ -1,2 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+@theme {
+  --font-heading: "Comfortaa", sans-serif; 
+  --font-accent: "Caveat", cursive;
+  
+  --color-gold: #b38e44;
+  --background-image-gold-gradient: linear-gradient(180deg, #BD9751 25%, #574625 98%);
+}
