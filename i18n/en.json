@@ -2,6 +2,9 @@
   "nav": {
     "title_1": "TAMA",
     "title_2": "CAPS",
-    "subtitle": "Excellence in every capsule"
+    "subtitle": "Excellence in every capsule",
+    "company": "Company",
+    "product": "Product",
+    "contacts": "Contacts"
   }
 }

@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
   standalone: true
