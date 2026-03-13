@@ -8,7 +8,10 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, HeroComponent, ProductComponent, TranslatePipe ],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 192d64d (feat: connect product component to app component and add background image to product section)
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
