@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
+import { HeroComponent } from './features/sections/hero/hero.component';
+
 import { RouterOutlet } from '@angular/router';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TranslatePipe],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, TranslatePipe ],
+
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

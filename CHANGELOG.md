@@ -1,7 +1,13 @@
-### [tama-project-3.0.0-RELEASE] - 2026-03-12
+
+### [tama-project-2.2.0-RELEASE] - 2026-03-12
 
 ### Added 
-- Added a navigation bar in accordance to the Figma styles
+- Added a navigation bar in accordance to the Figma styles (Github Project[#13], PR [#30])
+
+### [tama-project-2.1.0-RELEASE] - 2026-03-13
+
+### Added 
+- Update hero section as per figma styles (Github Project[#15], PR [#31])
 
 ### [tama-project-2.0.0-RELEASE] - 2026-03-11
 
