@@ -20,4 +20,13 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render an empty footer container', () => {
+    const element: HTMLElement = fixture.nativeElement;
+    const footer = element.querySelector('footer');
+
+    expect(footer).toBeTruthy();
+    expect(footer?.id).toBe('contacts');
+    expect(footer?.children.length).toBe(0);
+  });
 });

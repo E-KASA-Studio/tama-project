@@ -6,5 +6,10 @@
     "company": "Company",
     "product": "Product",
     "contacts": "Contacts"
+  },
+  "footer": {
+    "contactCta": "Contact us to elevate your business.",
+    "addressLabel": "Address:",
+    "addressValue": "113925, City,\nStreet, 00"
   }
 }
