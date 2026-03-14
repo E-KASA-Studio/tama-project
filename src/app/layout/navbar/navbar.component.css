@@ -1,0 +1,12 @@
+/* Hamburger → X animation */
+[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(0.5625rem) rotate(45deg);
+}
+
+[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-0.5625rem) rotate(-45deg);
+}
