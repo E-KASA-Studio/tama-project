@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { HeroComponent } from './features/sections/hero/hero.component';
-
+import { NavbarComponent } from './layout/navbar/navbar.component';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
