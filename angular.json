@@ -90,11 +90,6 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "i18n",
-                "output": "i18n"
               }
             ],
             "styles": [
