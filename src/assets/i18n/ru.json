@@ -8,8 +8,9 @@
     "contacts": "Контакты"
   },
   "footer": {
-    "contactCta": "Свяжитесь с нами, чтобы развивать ваш бизнес.",
-    "addressLabel": "Адрес:",
-    "addressValue": "113925, Город,\nУлица, 00"
+    "company": "ТАМА КАПС, ТОО",
+    "address": "113925, Город, Улица, 00",
+    "email": "test@tamacaps.kz",
+    "phone": "+XX XXX XX XX XX"
   }
 }

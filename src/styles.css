@@ -10,8 +10,9 @@
   --color-brand-light: #e6c77f;
   --color-dark: #2a2a2a;
   --color-gold: #b38e44;
+  --color-footer-bg: #373736;
   --color-footer-card: #505050;
   --color-footer-text: #bec3c9;
   --background-image-gold-gradient: linear-gradient(180deg, #BD9751 25%, #574625 98%);
-  --background-image-footer-tint: radial-gradient(ellipse at center, rgba(86, 86, 86, 0.82) 5%, rgba(61, 61, 60, 0.82) 42%, rgba(36, 36, 34, 0.82) 78%);
+  --background-image-footer-tint: radial-gradient(ellipse at center, rgba(86, 86, 86, 1) 4.9184%, rgba(61, 61, 60, 1) 41.657%, rgba(36, 36, 34, 1) 78.396%);
 }

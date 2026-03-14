@@ -8,8 +8,9 @@
     "contacts": "Contacts"
   },
   "footer": {
-    "contactCta": "Contact us to elevate your business.",
-    "addressLabel": "Address:",
-    "addressValue": "113925, City,\nStreet, 00"
+    "company": "TAMA CAPS, Ltd",
+    "address": "113925, City, Street, 00",
+    "email": "test@tamacaps.kz",
+    "phone": "+XX XXX XX XX XX"
   }
 }
