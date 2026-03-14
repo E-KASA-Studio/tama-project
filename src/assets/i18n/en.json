@@ -2,9 +2,21 @@
   "nav": {
     "title_1": "TAMA",
     "title_2": "CAPS",
+<<<<<<< HEAD
     "subtitle": "Excellence in every capsule",
     "company": "Company",
     "product": "Product",
     "contacts": "Contacts"
+=======
+    "subtitle": "Excellence in every capsule"
+  },
+  "product": {
+    "title_1": "",
+    "title_2": "",
+    "articleTitle_1": "",
+    "articleTitle_2": "",
+    "article_1": "",
+    "article_2": ""
+>>>>>>> ceea0d2 (feat: add translation in en.json)
   }
 }
