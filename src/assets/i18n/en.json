@@ -2,14 +2,16 @@
   "nav": {
     "title_1": "TAMA",
     "title_2": "CAPS",
-    "subtitle": "Excellence in every capsule"
+    "subtitle": "Excellence in every capsule",
+    "company": "Company",
+    "product": "Product",
+    "contacts": "Contacts"
   },
-  "product": {
-    "title_1": "",
-    "title_2": "",
-    "articleTitle_1": "",
-    "articleTitle_2": "",
-    "article_1": "",
-    "article_2": ""
+    "contacts": {
+    "title_1": "Contact us to elevate your business"
+  },
+  "ariaLabel": {
+    "contacts": "Contacts"
   }
+
 }
