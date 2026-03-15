@@ -1,38 +1,39 @@
-<footer id="contacts" class="w-full bg-footer-bg font-comfortaa">
-  <div class="flex flex-col items-center gap-6 px-6 py-8
-    md:flex-row md:justify-between md:gap-4 md:px-10 md:py-5">
+<footer id="contacts" class="w-full bg-transparent font-comfortaa">
+  <div class="w-full px-6 py-8
+    flex flex-col items-center gap-6
+    md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:h-[101px] md:px-12 md:py-0 md:gap-0">
 
     <!-- Logo -->
     <a href="#" aria-label="TAMA CAPS home"
-      class="shrink-0 flex items-center justify-center transition-transform duration-300
+      class="shrink-0 flex items-center justify-center md:justify-self-start transition-transform duration-300
         hover:scale-105 focus:scale-105 focus:outline-2 focus:outline-brand focus:rounded">
       <img src="tama-caps-logo.png" alt="TAMA CAPS"
-        class="w-16 h-16 object-contain md:w-14 md:h-14" />
+        class="w-[72px] h-16 object-cover" />
     </a>
 
     <!-- Nav Links -->
-    <nav class="flex items-center gap-6 md:gap-8">
+    <nav class="flex items-center justify-center gap-6 md:gap-10 md:justify-self-center">
       <button (click)="scrollToSection('company')"
-        class="bg-transparent border-none text-brand font-bold text-sm cursor-pointer
-          transition-colors duration-300 hover:text-brand-light focus:text-brand-light focus:outline-none">
+        class="bg-transparent border-none p-0 text-footer-ink font-bold text-[14px] leading-normal cursor-pointer
+          transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
         {{ navCompany }}
       </button>
       <button (click)="scrollToSection('product')"
-        class="bg-transparent border-none text-brand font-bold text-sm cursor-pointer
-          transition-colors duration-300 hover:text-brand-light focus:text-brand-light focus:outline-none">
+        class="bg-transparent border-none p-0 text-footer-ink font-bold text-[14px] leading-normal cursor-pointer
+          transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
         {{ navProduct }}
       </button>
       <button (click)="scrollToSection('contacts')"
-        class="bg-transparent border-none text-brand font-bold text-sm cursor-pointer
-          transition-colors duration-300 hover:text-brand-light focus:text-brand-light focus:outline-none">
+        class="bg-transparent border-none p-0 text-footer-ink font-bold text-[14px] leading-normal cursor-pointer
+          transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
         {{ navContacts }}
       </button>
     </nav>
 
     <!-- Contact Info -->
-    <div class="flex flex-col items-center gap-0.5 text-footer-text text-xs text-center
-      md:items-end md:text-right">
-      <p class="font-bold text-sm">{{ company }}</p>
+    <div class="flex flex-col items-center gap-0.5 text-footer-ink text-[11px] leading-normal font-bold text-center
+      md:items-end md:justify-self-end md:text-right">
+      <p>{{ company }}</p>
       <p>{{ address }}</p>
       <p>{{ email }}</p>
       <p>{{ phone }}</p>
