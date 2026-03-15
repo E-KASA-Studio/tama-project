@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+=======
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+>>>>>>> d2781cc (feat: connect custom elements schema)
 
 @Component({
   selector: 'app-product',
