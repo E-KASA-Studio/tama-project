@@ -6,11 +6,5 @@
     "company": "Company",
     "product": "Product",
     "contacts": "Contacts"
-  },
-  "footer": {
-    "company": "TAMA CAPS, Ltd",
-    "address": "113925, City, Street, 00",
-    "email": "test@tamacaps.kz",
-    "phone": "+XX XXX XX XX XX"
   }
 }
