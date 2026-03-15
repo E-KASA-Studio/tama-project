@@ -70,7 +70,19 @@
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa beatae deleniti ipsum tempora alias maiores excepturi consectetur architecto earum, esse animi! Aliquid, doloremque quae.
     </p>
     
-    <div class="w-full max-w-[300px] xl:absolute xl:-right-10 xl:-bottom-10">
+    <div class="w-full max-w-[400px] h-[300px] xl:absolute xl:-right-20 xl:-bottom-20 z-20">
+      <model-viewer 
+        src="image/Gold Capsule.glb" 
+        alt="3D Coffee Capsules"
+        auto-rotate 
+        camera-controls 
+        shadow-intensity="2" 
+        exposure="0.5"
+        camera-orbit="45deg 75deg auto"
+        disable-zoom
+        style="width: 100%; height: 100%; background-color: transparent;">
+      </model-viewer>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-1/2 h-4 bg-black/40 blur-xl rounded-[100%]"></div>
        </div>
   </div>
 </div>
