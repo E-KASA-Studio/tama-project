@@ -7,7 +7,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   imports: [CommonModule, TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  standalone: true
 })
 export class NavbarComponent {
   isMenuOpen = signal(false);

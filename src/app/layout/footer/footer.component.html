@@ -1,1 +1,40 @@
-<p>footer works!</p>
+<footer aria-label="Footer" class="w-full bg-transparent font-comfortaa">
+  <div class="w-full px-6 py-8
+    flex flex-col items-center gap-6
+    md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:h-[101px] md:px-12 md:py-0 md:gap-0">
+
+    <!-- Logo -->
+    <a href="#" aria-label="TAMA CAPS home"
+      class="shrink-0 flex items-center justify-center md:justify-self-start transition-transform duration-300
+        hover:scale-105 focus:scale-105 focus:outline-2 focus:outline-brand focus:rounded">
+      <img src="tama-caps-logo.png" alt="TAMA CAPS"
+        class="w-[72px] h-16 object-cover" />
+    </a>
+
+    <!-- Nav Links -->
+    <nav class="flex items-center justify-center gap-6 md:gap-10 md:justify-self-center">
+      <a href="#company"
+        class="text-footer-ink font-bold text-[14px] leading-normal transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
+        Company
+      </a>
+      <a href="#product"
+        class="text-footer-ink font-bold text-[14px] leading-normal transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
+        Product
+      </a>
+      <a href="#contacts"
+        class="text-footer-ink font-bold text-[14px] leading-normal transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
+        Contacts
+      </a>
+    </nav>
+
+    <!-- Contact Info -->
+    <div class="flex flex-col items-center gap-0.5 text-footer-ink text-[11px] leading-normal font-bold text-center
+      md:items-end md:justify-self-end md:text-right">
+      <p>TAMA CAPS, Ltd</p>
+      <p>113925, City, Street, 00</p>
+      <p>test&#64;tamacaps.kz</p>
+      <p>+XX XXX XX XX XX</p>
+    </div>
+
+  </div>
+</footer>

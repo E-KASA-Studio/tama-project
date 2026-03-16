@@ -1,3 +1,7 @@
+### [tama-project-2.3.0-RELEASE] - 2026-03-15
+
+### Added 
+- Added a footer in accordance to the Figma styles
 
 ### [tama-project-2.2.0-RELEASE] - 2026-03-12
 
