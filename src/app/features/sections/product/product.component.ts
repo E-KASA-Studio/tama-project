@@ -1,13 +1,11 @@
 <<<<<<< HEAD
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-=======
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
->>>>>>> d2781cc (feat: connect custom elements schema)
+import { TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
