@@ -1,7 +1,12 @@
 ### [tama-project-2.3.0-RELEASE] - 2026-03-15
 
 ### Added 
-- Added a footer in accordance to the Figma styles
+- Added PRODUCT section in accordance to the Figma styles (Github Project[#18], PR [#39])
+
+### [tama-project-2.3.0-RELEASE] - 2026-03-15
+
+### Added 
+- Added a footer in accordance to the Figma styles Github Project[#14], PR [#33]
 
 ### [tama-project-2.2.0-RELEASE] - 2026-03-12
 
