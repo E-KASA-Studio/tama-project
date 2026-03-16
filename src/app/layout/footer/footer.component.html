@@ -1,4 +1,4 @@
-<footer id="contacts" class="w-full bg-transparent font-comfortaa">
+<footer aria-label="Footer" class="w-full bg-transparent font-comfortaa">
   <div class="w-full px-6 py-8
     flex flex-col items-center gap-6
     md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:h-[101px] md:px-12 md:py-0 md:gap-0">
@@ -13,30 +13,27 @@
 
     <!-- Nav Links -->
     <nav class="flex items-center justify-center gap-6 md:gap-10 md:justify-self-center">
-      <button (click)="scrollToSection('company')"
-        class="bg-transparent border-none p-0 text-footer-ink font-bold text-[14px] leading-normal cursor-pointer
-          transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
-        {{ navCompany }}
-      </button>
-      <button (click)="scrollToSection('product')"
-        class="bg-transparent border-none p-0 text-footer-ink font-bold text-[14px] leading-normal cursor-pointer
-          transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
-        {{ navProduct }}
-      </button>
-      <button (click)="scrollToSection('contacts')"
-        class="bg-transparent border-none p-0 text-footer-ink font-bold text-[14px] leading-normal cursor-pointer
-          transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
-        {{ navContacts }}
-      </button>
+      <a href="#company"
+        class="text-footer-ink font-bold text-[14px] leading-normal transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
+        Company
+      </a>
+      <a href="#product"
+        class="text-footer-ink font-bold text-[14px] leading-normal transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
+        Product
+      </a>
+      <a href="#contacts"
+        class="text-footer-ink font-bold text-[14px] leading-normal transition-opacity duration-300 hover:opacity-80 focus:opacity-80 focus:outline-none">
+        Contacts
+      </a>
     </nav>
 
     <!-- Contact Info -->
     <div class="flex flex-col items-center gap-0.5 text-footer-ink text-[11px] leading-normal font-bold text-center
       md:items-end md:justify-self-end md:text-right">
-      <p>{{ company }}</p>
-      <p>{{ address }}</p>
-      <p>{{ email }}</p>
-      <p>{{ phone }}</p>
+      <p>TAMA CAPS, Ltd</p>
+      <p>113925, City, Street, 00</p>
+      <p>test&#64;tamacaps.kz</p>
+      <p>+XX XXX XX XX XX</p>
     </div>
 
   </div>

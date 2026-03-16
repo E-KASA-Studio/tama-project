@@ -21,12 +21,21 @@ describe('FooterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render an empty footer container', () => {
+  it('should render the footer container', () => {
     const element: HTMLElement = fixture.nativeElement;
     const footer = element.querySelector('footer');
 
     expect(footer).toBeTruthy();
-    expect(footer?.id).toBe('contacts');
-    expect(footer?.children.length).toBe(0);
+    expect(footer?.getAttribute('aria-label')).toBe('Footer');
+  });
+
+  it('should render section links as anchors', () => {
+    const element: HTMLElement = fixture.nativeElement;
+    const links = element.querySelectorAll('nav a');
+
+    expect(links.length).toBe(3);
+    expect(links[0].getAttribute('href')).toBe('#company');
+    expect(links[1].getAttribute('href')).toBe('#product');
+    expect(links[2].getAttribute('href')).toBe('#contacts');
   });
 });

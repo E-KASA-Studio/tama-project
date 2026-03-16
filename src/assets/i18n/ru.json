@@ -6,11 +6,5 @@
     "company": "Компания",
     "product": "Продукт",
     "contacts": "Контакты"
-  },
-  "footer": {
-    "company": "ТАМА КАПС, ТОО",
-    "address": "113925, Город, Улица, 00",
-    "email": "test@tamacaps.kz",
-    "phone": "+XX XXX XX XX XX"
   }
 }
