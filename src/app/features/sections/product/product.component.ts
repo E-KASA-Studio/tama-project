@@ -11,9 +11,9 @@ import { TranslatePipe} from '@ngx-translate/core';
 })
 export class ProductComponent implements OnInit, OnDestroy {
   models: string[] = [
-    'image/Dark Green Capsule.glb',
-    'image/Gold Capsule.glb',
-    'image/Purple Capsule.glb'
+    'image/Dark Green Open.glb',
+    'image/Gold Open.glb',
+    'image/Purple Open.glb'
   ];
 
   currentModelIndex: number = 0;
