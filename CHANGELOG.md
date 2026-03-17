@@ -1,7 +1,7 @@
 ### [tama-project-2.4.1-RELEASE] - 2026-03-17
 
 ### Added 
-- Removed navigation from footer and 
+- Removed navigation from footer and made mobile verision display the contents in one line
 
 ### [tama-project-2.4.0-RELEASE] - 2026-03-15
 
