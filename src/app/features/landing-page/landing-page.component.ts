@@ -6,7 +6,7 @@ import { ProductComponent } from "../sections/product/product.component";
 
 @Component({
   selector: 'app-landing-page',
-  imports: [HeroComponent, ContactsComponent, ProductComponent],
+  imports: [HeroComponent, ContactsComponent, ProductComponent, CompanyComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
