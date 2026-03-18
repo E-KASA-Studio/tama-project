@@ -1,3 +1,8 @@
+### [tama-project-2.5.0-RELEASE] - 2026-03-18
+
+### Added 
+- Added COMPANY section in accordance to the Figma styles (Github Project[#17], PR [#41])
+
 ### [tama-project-2.4.1-RELEASE] - 2026-03-17
 
 ### Added 

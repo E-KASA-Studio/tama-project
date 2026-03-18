@@ -17,3 +17,8 @@
   --background-image-gold-gradient: linear-gradient(180deg, #BD9751 25%, #574625 98%);
   --background-image-footer-tint: radial-gradient(ellipse at center, rgba(86, 86, 86, 1) 4.9184%, rgba(61, 61, 60, 1) 41.657%, rgba(36, 36, 34, 1) 78.396%);
 }
+
+@utility bg-main-radial {
+  background: radial-gradient(circle, #3B3B3B 5%, #101010 78%);
+  background-attachment: fixed;
+}

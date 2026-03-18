@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component,CUSTOM_ELEMENTS_SCHEMA, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslatePipe} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-company',
-  imports: [],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './company.component.html',
-  styleUrl: './company.component.css'
+  styleUrl: './company.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CompanyComponent {
-
+    model: string = 'image/Dark Gold Open.glb';
 }
