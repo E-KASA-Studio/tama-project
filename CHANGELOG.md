@@ -1,4 +1,9 @@
-### [tama-project-2.3.0-RELEASE] - 2026-03-15
+### [tama-project-2.4.1-RELEASE] - 2026-03-17
+
+### Added 
+- Removed navigation from footer and made mobile verision display the contents in one line (Github Project[#37], PR [#40])
+
+### [tama-project-2.4.0-RELEASE] - 2026-03-15
 
 ### Added 
 - Added PRODUCT section in accordance to the Figma styles (Github Project[#18], PR [#39])
