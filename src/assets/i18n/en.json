@@ -7,6 +7,14 @@
     "product": "Product",
     "contacts": "Contacts"
   },
+  "product": {
+    "title_1": "Precision in production. Quality results.",
+    "title_2": "How the product is created",
+    "articleTitle_1": "European equipment",
+    "articleTitle_2": "Solutions for your brand",
+    "article_1": "Our production is equipped with modern European machinery. This allows us to guarantee flawless quality, high efficiency, and compliance with the principles of sustainable development.",
+    "article_2": "We adapt the color of the capsules to your brand, helping you create a recognizable product while maintaining consistently high quality."
+  },
     "contacts": {
     "title_1": "Contact us to elevate your business"
   },
