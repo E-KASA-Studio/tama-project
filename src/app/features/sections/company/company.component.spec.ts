@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { CompanyComponent } from './company.component';
 
 describe('CompanyComponent', () => {
@@ -8,7 +8,7 @@ describe('CompanyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CompanyComponent]
+      imports: [CompanyComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
 
