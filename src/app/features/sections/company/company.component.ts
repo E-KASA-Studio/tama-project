@@ -1,4 +1,4 @@
-import { Component,CUSTOM_ELEMENTS_SCHEMA, OnInit, OnDestroy } from '@angular/core';
+import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe} from '@ngx-translate/core';
 
