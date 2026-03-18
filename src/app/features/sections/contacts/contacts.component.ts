@@ -15,15 +15,15 @@ export class ContactsComponent {
   private readonly phoneKey = this.languageService.translationSignal('contactsSection.phone');
   private readonly addressKey = this.languageService.translationSignal('contactsSection.address');
 
-readonly emailHref = computed(() => `mailto:${this.emailKey()}`);
+  readonly emailHref = computed(() => `mailto:${this.emailKey()}`);
 
-readonly phoneHref = computed(() => 
-  `tel:${this.phoneKey().replace(/\s/g, '')}`
-);
+  readonly phoneHref = computed(() => 
+    `tel:${this.phoneKey().replaceAll(/\s/g, '')}`
+  );
 
-readonly mapsHref = computed(() => 
-  `https://maps.google.com/?q=${encodeURIComponent(this.addressKey())}`
-);
+  readonly mapsHref = computed(() => 
+    `https://maps.google.com/?q=${encodeURIComponent(this.addressKey())}`
+  );
 
 
 }
