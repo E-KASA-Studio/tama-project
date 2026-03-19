@@ -1,0 +1,42 @@
+name: Dev Environment Deployment
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Unit Tests
+        # Runs tests once without watching, using a headless browser
+        run: npm test -- --watch=false --browsers=ChromeHeadlessCI
+
+      - name: Build Dev Artifact
+        # Compiles the project using the development configuration we just set up
+        run: npm run build:dev
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
+        with:
+          server: ${{ secrets.FTP_DEV_SERVER }}
+          username: ${{ secrets.FTP_DEV_USERNAME }}
+          password: ${{ secrets.FTP_DEV_PASSWORD }}
+          # Path to the compiled Angular 19 output
+          local-dir: ./dist/tama-project/browser/
+          # Dumps the files straight into the public directory of your Hostinger dev site
+          server-dir: /public_html/

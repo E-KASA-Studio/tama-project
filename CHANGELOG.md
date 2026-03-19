@@ -1,3 +1,8 @@
+### [tama-project-2.5.1-RELEASE] - 2026-03-19
+
+### Added 
+- Added development hosting setup with GitHub Actions deployment workflow, CI headless test runner, and environment-specific robots handling at build stage
+
 ### [tama-project-2.5.0-RELEASE] - 2026-03-18
 
 ### Added 
