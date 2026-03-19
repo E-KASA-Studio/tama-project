@@ -1,6 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import { LandingScrollService } from '../../features/services/landing-scroll.service';
+
+
+
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +13,12 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
+
+constructor(private scrollService: LandingScrollService) {}
+
+onNavClick(sectionId: string) {
+  this.scrollService.scrollToSection(sectionId);
+}
   isMenuOpen = signal(false);
   currentLanguage = signal<'en' | 'ru'>('en');
 
@@ -21,3 +31,4 @@ export class NavbarComponent {
   }
 
 }
+
