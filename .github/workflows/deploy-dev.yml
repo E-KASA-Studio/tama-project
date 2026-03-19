@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Dev Artifact
         # Compiles the project using the development configuration we just set up
-        run: npm run build -- --configuration development
+        run: npm run build:dev
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
