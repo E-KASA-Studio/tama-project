@@ -2,14 +2,24 @@
   "nav": {
     "title_1": "TAMA",
     "title_2": "CAPS",
-    "subtitle": "Excellence in every capsule"
+    "subtitle": "Excellence in every capsule",
+    "company": "Company",
+    "product": "Product",
+    "contacts": "Contacts"
   },
   "product": {
-    "title_1": "",
-    "title_2": "",
-    "articleTitle_1": "",
-    "articleTitle_2": "",
-    "article_1": "",
-    "article_2": ""
+    "title_1": "Precision in production. Quality results.",
+    "title_2": "How the product is created",
+    "articleTitle_1": "European equipment",
+    "articleTitle_2": "Solutions for your brand",
+    "article_1": "Our production facility is equipped with advanced European machinery. This allows us to guarantee impeccable quality, high efficiency, and adherence to sustainable development principles.",
+    "article_2": "We adapt the color of the capsules to your brand, helping you create a recognizable product while maintaining consistently high quality."
+  },
+    "contacts": {
+    "title_1": "Contact us to elevate your business"
+  },
+  "ariaLabel": {
+    "contacts": "Contacts"
   }
+
 }

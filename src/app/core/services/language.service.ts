@@ -2,6 +2,7 @@ import { inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
 import { TranslateService } from "@ngx-translate/core";
 import { LanguageCode, AVAILABLE_LANGUAGES } from "./models/language.model";
 import { isPlatformBrowser } from '@angular/common';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 
 @Injectable({
@@ -44,4 +45,9 @@ export class LanguageService {
       }
   }
 
+translationSignal(key: string) {
+  return toSignal(this.translate.stream(key), {
+    initialValue: this.translate.instant(key)
+  });
+}
 }

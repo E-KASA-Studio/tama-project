@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactsComponent } from './contacts.component';
+import { provideTranslateService } from '@ngx-translate/core';
 
 describe('ContactsComponent', () => {
   let component: ContactsComponent;
@@ -8,7 +9,8 @@ describe('ContactsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactsComponent]
+      imports: [ContactsComponent],
+      providers: [provideTranslateService()]
     })
     .compileComponents();
 
