@@ -29,7 +29,8 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
-              }
+              },
+              "src/robots.txt"
             ],
             "styles": [
               "src/styles.css"
@@ -53,6 +54,16 @@
               "outputHashing": "all"
             },
             "development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                },
+                {
+                  "replace": "src/robots.txt",
+                  "with": "src/robots.dev.txt"
+                }
+              ],
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
