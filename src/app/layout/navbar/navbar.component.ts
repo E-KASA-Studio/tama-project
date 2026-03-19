@@ -15,11 +15,7 @@ import { LandingScrollService } from '../../features/services/landing-scroll.ser
 })
 export class NavbarComponent {
 
-constructor(private scrollService: LandingScrollService) {}
 
-onNavClick(sectionId: string) {
-  this.scrollService.scrollToSection(sectionId);
-}
   isMenuOpen = signal(false);
   currentLanguage = signal<'en' | 'ru'>('en');
 
