@@ -1,3 +1,8 @@
+### [tama-project-2.5.2-RELEASE] - 2026-03-19
+
+### Added 
+- Fixed development deployment flow to trigger from `develop` branch and aligned build/deploy pipeline for dev hosting
+
 ### [tama-project-2.5.1-RELEASE] - 2026-03-19
 
 ### Added 
