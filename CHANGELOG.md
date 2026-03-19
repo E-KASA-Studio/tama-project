@@ -1,3 +1,8 @@
+### [tama-project-2.6.0-RELEASE] - 2026-03-19
+
+### Added 
+- Update CONTACTS section as per FIGMA styles(Github Project[#19], PR [#42])
+
 ### [tama-project-2.5.2-RELEASE] - 2026-03-19
 
 ### Added 
