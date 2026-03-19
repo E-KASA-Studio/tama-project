@@ -42,4 +42,5 @@ export class ProductComponent implements OnInit, OnDestroy {
     this.currentModelIndex = (this.currentModelIndex + 1) % this.models.length;
   }
 
+
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService, TranslatePipe} from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-hero',
   imports: [TranslatePipe],
@@ -8,5 +9,5 @@ import { TranslateService, TranslatePipe} from '@ngx-translate/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
-
+  
 }
