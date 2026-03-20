@@ -1,3 +1,8 @@
+### [tama-project-2.8.0-RELEASE] - 2026-03-20
+
+### Added 
+- Setup scrolling routing logic for navbar links(Github Project[#16], PR [#48])
+
 ### [tama-project-2.7.0-RELEASE] - 2026-03-20
 
 ### Added 
