@@ -1,11 +1,11 @@
 {
   "name": "tama-project",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:dev": "ng build --configuration development && node scripts/set-robots.cjs dev",
+    "build:dev": "ng build --configuration development --output-hashing=all && node scripts/set-robots.cjs dev",
     "build:prod": "ng build --configuration production && node scripts/set-robots.cjs prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
