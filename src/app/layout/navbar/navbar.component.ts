@@ -2,7 +2,6 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RouterLink } from "@angular/router";
-import { LandingScrollService } from '../../features/services/landing-scroll.service';
 
 
 
