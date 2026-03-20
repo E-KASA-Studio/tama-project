@@ -1,10 +1,11 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe} from '@ngx-translate/core';
+import { ScrollRevealDirective } from '../../../shared/ui/scroll-reveal.directive';
 
 @Component({
   selector: 'app-product',
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, ScrollRevealDirective],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
