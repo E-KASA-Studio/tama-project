@@ -1,4 +1,29 @@
-<app-hero></app-hero>
-<app-company></app-company>
-<app-product></app-product>
-<app-contacts></app-contacts>
+<app-hero />
+
+<section id="company" class="scroll-mt-[60px]" #companyTrigger>
+  @defer (on viewport; on interaction(companyTrigger); prefetch on idle) {
+    <app-company />
+  } @placeholder (minimum 500ms) {
+    <div class="min-h-screen flex items-center justify-center bg-main-radial">
+      <div class="animate-pulse text-gold-gradient font-comfortaa text-xl">
+        Loading company information...
+      </div>
+    </div>
+  }
+</section>
+
+<section id="product" class="scroll-mt-[60px]" #productTrigger>
+  @defer (on viewport; on interaction(productTrigger); prefetch on idle) {
+    <app-product />
+  } @placeholder {
+    <div class="min-h-screen bg-main-radial"></div>
+  }
+</section>
+
+<section id="contacts" class="scroll-mt-[60px]" #contactsTrigger>
+  @defer (on viewport; on interaction(contactsTrigger)) {
+    <app-contacts />
+  } @placeholder {
+    <div class="min-h-[400px] bg-main-radial"></div>
+  }
+</section>
