@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CompanyComponent } from '../sections/company/company.component';
 import { HeroComponent } from '../sections/hero/hero.component';
 import { ContactsComponent } from "../sections/contacts/contacts.component";
@@ -11,7 +11,7 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit {
     private readonly viewportScroller = inject(ViewportScroller);
 
   ngOnInit() {
