@@ -1,1 +1,8 @@
-<p>scroll-to-top-button works!</p>
+<button
+	*ngIf="isVisible"
+	type="button"
+	aria-label="Go up"
+	class="go-up-button"
+	(click)="scrollToTop()">
+	GO UP
+</button>
