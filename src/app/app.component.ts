@@ -19,6 +19,12 @@ export class AppComponent implements OnInit{
   constructor(private meta: Meta) {}
 
   ngOnInit(): void {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+
     if (!environment.production) {
       this.meta.addTag({ name: 'robots', content: 'noindex, nofollow' });
     }
