@@ -1,3 +1,8 @@
+### [tama-project-2.8.1-RELEASE] - 2026-03-23 
+
+### Added 
+- Setup scrolling logic for landing-page.service(Github Project[#53], PR [#54])
+
 ### [tama-project-2.8.0-RELEASE] - 2026-03-23 
 
 ### Added 
