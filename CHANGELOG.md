@@ -1,3 +1,8 @@
+### [tama-project-2.10.0-RELEASE] - 2026-03-23 
+
+### Added 
+-  Implement language.service logic in components (Github Project[#36], PR [#55])
+
 ### [tama-project-2.9.0-RELEASE] - 2026-03-23 
 
 ### Added 
