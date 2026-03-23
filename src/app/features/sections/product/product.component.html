@@ -34,15 +34,21 @@
 
   <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 lg:gap-x-12 items-start mb-16 px-6 md:px-0">
   
-  <div class="md:col-span-4 lg:col-span-3 md:order-1 order-2 mt-8 md:ml-1 md:mt-0 
+  <div class="md:col-span-4 lg:col-span-4 md:order-1 order-2 mt-8 md:ml-1 md:mt-0 
               w-[200px] md:w-full mx-auto md:mx-0 shrink-0
-              md:-ml-12  lg:-ml-9 lg:-mt-11"> 
+              md:-ml-12  lg:-ml-9 lg:-mt-2"> 
               
-    <div class="aspect-[4/5] overflow-hidden rounded-[25px] shadow-2xl border border-white/5 bg-neutral-900">
-      <img src="image/Capsule-filling-machine.png" 
-           alt="European equipment" 
-           class="w-full h-full object-cover">
-    </div>
+    <div class="aspect-[4/5] overflow-hidden rounded-[25px] shadow-2xl border border-white/5 bg-neutral-900 relative group">
+  <video 
+    #productVideo
+    class="w-full h-full object-cover"
+    muted
+    controls
+    preload="metadata">
+    <source src="video/video_coffee.mp4" type="video/mp4">
+    {{ 'product.errorMessage' | translate }}
+  </video>
+</div>
   </div>
 
   <div class="md:col-span-7 md:order-2 order-1 flex-1">
