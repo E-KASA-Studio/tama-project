@@ -3,6 +3,13 @@ import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RouterLink } from "@angular/router";
 
+
+
+
+
+
+
+
 @Component({
   selector: 'app-navbar',
   imports: [CommonModule, TranslatePipe, RouterLink],
@@ -10,6 +17,8 @@ import { RouterLink } from "@angular/router";
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
+
+
   isMenuOpen = signal(false);
   currentLanguage = signal<'en' | 'ru'>('en');
 
@@ -22,3 +31,4 @@ export class NavbarComponent {
   }
 
 }
+
