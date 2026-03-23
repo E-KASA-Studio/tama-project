@@ -72,22 +72,25 @@
   <div class="flex items-center col-start-3 row-start-1 justify-self-end
     md:col-start-3 md:row-auto">
     <div class="flex gap-1.5 items-center bg-brand/10 p-1 rounded-full">
+     @for (lang of languages; track lang.code) {
       <button
+        type="button"
         class="flex items-center justify-center bg-transparent border border-transparent text-brand
-          cursor-pointer p-1.5 size-9 xl:size-11 rounded-full transition-all duration-300
-          hover:bg-brand/20 focus:outline-2 focus:outline-brand"
-        [ngClass]="currentLanguage() === 'en' ? 'bg-brand text-dark border-brand hover:bg-brand-light hover:border-brand-light' : ''"
-        aria-label="English" title="English">
-        <img src="image/flag_en.svg" alt="English flag" class="size-5 xl:size-6 object-contain" />
+               cursor-pointer p-1.5 size-9 xl:size-11 rounded-full transition-all duration-300
+               hover:bg-brand/20 focus:outline-2 focus:outline-brand"
+        [ngClass]="{
+          'bg-brand text-dark border-brand hover:bg-brand-light hover:border-brand-light': 
+           languageService.currentLanguage() === lang.code
+        }"
+        [attr.aria-label]="lang.code.toUpperCase()"
+        [title]="lang.code.toUpperCase()"
+        (click)="languageService.switchLanguage(lang.code)">
+        
+        <img [src]="lang.icon" 
+             [alt]="lang.code + ' flag'" 
+             class="size-5 xl:size-6 object-contain" />
       </button>
-      <button
-        class="flex items-center justify-center bg-transparent border border-transparent text-brand
-          cursor-pointer p-1.5 size-9 xl:size-11 rounded-full transition-all duration-300
-          hover:bg-brand/20 focus:outline-2 focus:outline-brand"
-        [ngClass]="currentLanguage() === 'ru' ? 'bg-brand text-dark border-brand hover:bg-brand-light hover:border-brand-light' : ''"
-        aria-label="Русский" title="Русский">
-        <img src="image/flag_ru.svg" alt="Russian flag" class="size-5 xl:size-6 object-contain" />
-      </button>
+    }
     </div>
   </div>
 </nav>
