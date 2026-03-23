@@ -18,3 +18,34 @@
   background: radial-gradient(circle, #3B3B3B 5%, #101010 78%);
   background-attachment: fixed;
 }
+
+@layer utilities {
+  .text-sectionTitle-linear {
+    /* Градиент из трех точек: 30%, (промежуточная), 91% */
+    background: linear-gradient(
+      88deg, 
+      #BD9751 15%, 
+      #574625 85% /* добавил промежуточную точку для плавности, так как на скрине их три */
+
+    );
+    
+    /* Магия обрезки по тексту */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Делаем сам текст прозрачным, чтобы проявился фон-градиент */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Убираем fixed, чтобы градиент «сидел» на буквах и скроллился вместе с ними */
+    background-attachment: scroll;
+    
+    /* Чтобы градиент не дублировался, если заголовок высокий */
+    background-repeat: no-repeat;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
