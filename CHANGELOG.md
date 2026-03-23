@@ -1,3 +1,8 @@
+### [tama-project-2.9.0-RELEASE] - 2026-03-23 
+
+### Added 
+- Update PRODUCT section by adding video based on the provided sample (Github Project[#20], PR [#52])
+
 ### [tama-project-2.8.0-RELEASE] - 2026-03-23 
 
 ### Added 
