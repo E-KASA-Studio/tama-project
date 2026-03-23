@@ -13,11 +13,19 @@
     "articleTitle_1": "European equipment",
     "articleTitle_2": "Solutions for your brand",
     "article_1": "Our production facility is equipped with advanced European machinery. This allows us to guarantee impeccable quality, high efficiency, and adherence to sustainable development principles.",
-    "article_2": "We adapt the color of the capsules to your brand, helping you create a recognizable product while maintaining consistently high quality."
+    "article_2": "We adapt the color of the capsules to your brand, helping you create a recognizable product while maintaining consistently high quality.",
+    "errorMessage": "Your browser does not support the video element."
+  },
+  "company": {
+    "title_1": "The world standard in capsule production",
+    "title_2": "Why TAMA CAPS",
+    "article_1": "Our company produces capsules on premium European equipment with strict quality control, ensuring precision, durability, and stable performance.",
+    "article_2": "We use high-quality materials for manufacturing coffee capsules, meeting modern industry standards.",
+    "article_3": "Our mission is to build reliable partner relationships, ensuring stable quality, dependable deliveries, and long-term business cooperation based on transparency and efficiency."
   },
     "contacts": {
     "title_1": "Contact us to elevate your business",
-    "email": "adozhdikov@gmail.com",
+    "email": "test@gmail.com",
     "phone": "+7 777 777 77 77",
     "address": "placa Catalunya, 08002 Barcelona, Spain"
   },
