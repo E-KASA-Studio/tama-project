@@ -9,14 +9,8 @@ import {provideTranslateHttpLoader} from "@ngx-translate/http-loader";
 
 
 export const appConfig: ApplicationConfig = {
-<<<<<<< HEAD
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
-    provideRouter(routes, ...routerOptions, withInMemoryScrolling({anchorScrolling: 'enabled',
-    scrollPositionRestoration: 'enabled'
-  })),
-=======
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),
->>>>>>> ad64a58 (feat: changed app config ts)
+    provideRouter(routes, ...routerOptions),
     provideHttpClient(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({

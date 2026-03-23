@@ -1,3 +1,8 @@
+### [tama-project-2.8.0-RELEASE] - 2026-03-23 
+
+### Added 
+- Setup scrolling logic for landing-page.service(Github Project[#20], PR [#49])
+
 ### [tama-project-2.8.0-RELEASE] - 2026-03-20
 
 ### Added 
@@ -7,11 +12,6 @@
 
 ### Added 
 - Force caching for website resources upon update(Github Project[#46], PR [#47])
-
-### [tama-project-2.6.0-RELEASE] - 2026-03-20 
-
-### Added 
-- Setup scrolling logic for landing-page.service(Github Project[#20], PR [#49])
 
 ### [tama-project-2.6.0-RELEASE] - 2026-03-19
 

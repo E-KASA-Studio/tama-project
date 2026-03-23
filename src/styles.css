@@ -78,9 +78,7 @@ html {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 
 
@@ -111,8 +109,4 @@ html {
 .reveal-visible {
   opacity: 1 !important;
   transform: translateY(0);
-}
-
-html {
-  scroll-behavior: smooth;
 }
