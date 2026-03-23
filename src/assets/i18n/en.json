@@ -30,7 +30,9 @@
     "address": "placa Catalunya, 08002 Barcelona, Spain"
   },
   "ariaLabel": {
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "company": "Company",
+    "product": "Product"
   }
 
 }
