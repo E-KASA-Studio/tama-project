@@ -1,10 +1,11 @@
 import { Component, computed, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from '../../../core/services/language.service';
+import { ScrollRevealDirective } from '../../../shared/ui/scroll-reveal.directive';
 
 @Component({
   selector: 'app-contacts',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, ScrollRevealDirective],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.css'
 })
