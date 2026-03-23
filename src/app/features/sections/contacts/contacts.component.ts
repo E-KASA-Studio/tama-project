@@ -11,9 +11,9 @@ import { LanguageService } from '../../../core/services/language.service';
 export class ContactsComponent {
   private readonly languageService = inject(LanguageService);
 
-  private readonly emailKey = this.languageService.translationSignal('contactsSection.email');
-  private readonly phoneKey = this.languageService.translationSignal('contactsSection.phone');
-  private readonly addressKey = this.languageService.translationSignal('contactsSection.address');
+  private readonly emailKey = this.languageService.translationSignal('contacts.email');
+  private readonly phoneKey = this.languageService.translationSignal('contacts.phone');
+  private readonly addressKey = this.languageService.translationSignal('contacts.address');
 
   readonly emailHref = computed(() => `mailto:${this.emailKey()}`);
 
