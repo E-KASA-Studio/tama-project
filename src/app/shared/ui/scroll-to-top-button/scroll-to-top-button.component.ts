@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './scroll-to-top-button.component.html',
   styleUrl: './scroll-to-top-button.component.css'
 })
-export class ScrollToTopButtonComponent {
-
-}
+export class ScrollToTopButtonComponent {}
