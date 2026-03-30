@@ -1,4 +1,14 @@
-### [tama-project-2.9.1-RELEASE] - 2026-03-23 
+### [tama-project-2.12.0-RELEASE] - 2026-03-24
+
+### Added 
+- Implemented Go UP button visibility from COMPANY section and below(Github Project[#24], PR [#50])
+
+### [tama-project-2.11.0-RELEASE] - 2026-03-23 
+
+### Added 
+-  Implement language.service logic in components (Github Project[#36], PR [#55])
+
+### [tama-project-2.10.0-RELEASE] - 2026-03-23 
 
 ### Added 
 - Setup scrolling logic for landing-page.service(Github Project[#53], PR [#54])
