@@ -42,6 +42,8 @@ jobs:
           server: ${{ secrets.FTP_KZ_SERVER }}
           username: ${{ secrets.FTP_KZ_USERNAME }}
           password: ${{ secrets.FTP_KZ_PASSWORD }}
+          protocol: ftps
+          port: 21
           # Path to the compiled Angular 19 output
           local-dir: ./dist/tama-project/browser/
           # Dumps the files straight into the public directory of your Hostinger dev site
