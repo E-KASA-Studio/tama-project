@@ -36,7 +36,9 @@ jobs:
       - name: Restore Dev Robots Before Deploy
         run: node scripts/set-robots.cjs dev
 
-      - name: Deploy to Hoster via FTP
+      - name: Deploy to Hoster via FTPS (explicit)
+        id: deploy_ftps_explicit
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
         with:
           server: ${{ secrets.FTP_KZ_SERVER }}
@@ -44,7 +46,28 @@ jobs:
           password: ${{ secrets.FTP_KZ_PASSWORD }}
           protocol: ftps
           port: 21
+          # Some shared hosts present certificate/hostname mismatches on FTPS data sockets.
+          security: loose
+          # Increased timeout helps avoid sporadic data channel resets on large syncs.
+          timeout: 120000
+          # Temporarily verbose to diagnose transfer/channel mode issues in CI logs.
+          log-level: verbose
           # Path to the compiled Angular 19 output
           local-dir: ./dist/tama-project/browser/
           # Dumps the files straight into the public directory of your Hostinger dev site
+          server-dir: /httpdocs/
+
+      - name: Deploy to Hoster via FTPS (implicit fallback)
+        if: steps.deploy_ftps_explicit.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
+        with:
+          server: ${{ secrets.FTP_KZ_SERVER }}
+          username: ${{ secrets.FTP_KZ_USERNAME }}
+          password: ${{ secrets.FTP_KZ_PASSWORD }}
+          protocol: ftps-legacy
+          port: 990
+          security: loose
+          timeout: 120000
+          log-level: verbose
+          local-dir: ./dist/tama-project/browser/
           server-dir: /httpdocs/
