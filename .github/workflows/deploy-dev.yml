@@ -3,7 +3,7 @@ name: Dev Environment Deployment
 on:
   push:
     branches:
-      - develop
+      - kz-develop
 
 jobs:
   build-and-deploy:
@@ -36,13 +36,13 @@ jobs:
       - name: Restore Dev Robots Before Deploy
         run: node scripts/set-robots.cjs dev
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy to Hoster via FTP
         uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
         with:
-          server: ${{ secrets.FTP_DEV_SERVER }}
-          username: ${{ secrets.FTP_DEV_USERNAME }}
-          password: ${{ secrets.FTP_DEV_PASSWORD }}
+          server: ${{ secrets.FTP_KZ_SERVER }}
+          username: ${{ secrets.FTP_KZ_USERNAME }}
+          password: ${{ secrets.FTP_KZ_PASSWORD }}
           # Path to the compiled Angular 19 output
           local-dir: ./dist/tama-project/browser/
           # Dumps the files straight into the public directory of your Hostinger dev site
-          server-dir: /public_html/
+          server-dir: /httpdocs/
