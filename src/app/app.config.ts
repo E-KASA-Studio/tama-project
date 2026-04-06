@@ -6,6 +6,7 @@ import { routes, routerOptions } from './app.routes';
 
 import {provideTranslateService} from "@ngx-translate/core";
 import {provideTranslateHttpLoader} from "@ngx-translate/http-loader";
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 
 export const appConfig: ApplicationConfig = {
@@ -19,5 +20,6 @@ export const appConfig: ApplicationConfig = {
       }),
       fallbackLang: 'ru',
       lang: 'ru'
-    })]
+    }),
+    provideClientHydration(withEventReplay())]
 };
