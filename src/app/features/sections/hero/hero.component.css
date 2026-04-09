@@ -6,4 +6,22 @@
         bg-no-repeat bg-cover bg-[20%_center]
         bg-[url('/image/hero_upscayl.avif')]
     }
+
+    .hero_wrapper{
+        @apply relative z-10 w-full max-w-7xl mx-auto pl-5 pr-0 lg:pl-2 lg:pr-0 sm:mr-[0vw] md:mr-[3vw]  mt-[-9vh] flex flex-col items-end text-right select-none
+    }
+
+   .heading{
+        @apply leading-[1.0] tracking-widest uppercase
+            bg-clip-text text-transparent
+            flex flex-col items-end  pb-4 md:py-4 px-8 
+    }
+
+    .subtitle{
+        @apply text-[7vw] md:text-5xl lg:text-[6.5vw]
+                bg-clip-text text-transparent
+                py-4 px-8 mt-[-2vh] italic md:mr-5 
+    }
+
+    
 }
