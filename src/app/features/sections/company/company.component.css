@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer components {
+    .section-company {
+        @apply relative text-white py-16 px-6 md:px-12 lg:px-26 ;
+    }
+
+    .heading {
+        @apply bg-clip-text text-transparent text-3xl md:text-5xl font-light mb-9 tracking-wide pb-2 border-b;
+    }
+
+    .heading_2 {
+        @apply bg-clip-text text-transparent text-xl md:text-3xl opacity-90;
+    }
+
+    .article_1{
+        @apply  leading-relaxed text-sm md:text-base;
+    }
+
+    .article_2 {
+        @apply leading-relaxed text-sm md:text-base;
+    }
+
+    .article_3 {
+        @apply leading-relaxed text-sm md:text-base;
+    }
+
+    .capsule {
+        @apply relative h-[300px] md:h-[600px] w-full flex justify-center lg:justify-end items-end pb-12;
+    }
+}
