@@ -1,14 +1,7 @@
 <section attr.aria-label="{{ 'ariaLabel.contacts' | translate }}"
-  class="contacts-section relative z-20 w-full bg-main-radial py-16 px-4 min-h-screen
-    md:py-24 md:px-8
-    xl:py-32 xl:px-16">
+  class="contacts-section bg-main-radial contacts-section">
 
-  <h2 appScrollReveal class="font-heading bg-gold-gradient bg-clip-text text-transparent
-    leading-[1.1] overflow-hidden w-full text-left lg:text-center
-    px-2 md:px-6 max-w-none
-    mt-[-5vw] md:mt-0
-    mb-8 md:mb-20
-    text-[7vw] sm:text-[6vw] md:text-[8vw] lg:text-[40px] xl:text-[48px] 2xl:text-[54px]">
+  <h2 appScrollReveal class="font-heading bg-gold-gradient contacts-title">
     {{ 'contacts.title_1' | translate }}
   </h2>
 
@@ -19,9 +12,7 @@
       [href]="emailHref()"
       target="_blank"
       rel="noopener noreferrer"
-      class="group flex flex-col items-center justify-center p-10
-        border border-brand/30 bg-black/20 backdrop-blur-sm
-        transition-all duration-300
+      class=" email group border-brand/30
         hover:border-brand hover:bg-brand/5">
       <div class="mb-6 text-brand transition-transform duration-300 group-hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,9 +27,7 @@
     <!-- Phone -->
     <a
       [href]="phoneHref()"
-      class="group flex flex-col items-center justify-center p-10
-        border border-brand/30 bg-black/20 backdrop-blur-sm
-        transition-all duration-300
+      class="phone group border-brand/30
         hover:border-brand hover:bg-brand/5">
       <div class="mb-6 text-brand transition-transform duration-300 group-hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,9 +44,7 @@
       [href]="mapsHref()"
       target="_blank"
       rel="noopener noreferrer"
-      class="group flex flex-col items-center justify-center p-10
-        border border-brand/30 bg-black/20 backdrop-blur-sm
-        transition-all duration-300
+      class="location group border-brand/30
         hover:border-brand hover:bg-brand/5">
       <div class="mb-6 text-brand transition-transform duration-300 group-hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
