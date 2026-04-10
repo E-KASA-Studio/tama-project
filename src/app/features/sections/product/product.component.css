@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer components {
+    .product-section {
+        @apply relative min-h-screen w-full flex flex-col py-20 bg-no-repeat bg-cover bg-center;
+    }
+
+    .product-title {
+        @apply bg-clip-text text-transparent leading-[1.1] overflow-hidden
+           w-full text-left px-6 max-w-none
+           mt-[-10vw] md:mt-[-3vw] min-[1024px]:mt-[-70vw] min-[1280px]:mt-[-15vw] xl:mt-[-0.5vw]
+           mb-10 xl:text-center
+           whitespace-normal md:whitespace-normal min-[1280px]:whitespace-nowrap
+               text-[25px]       
+               md:text-[40px]    
+               lg:text-[32px]   
+               xl:text-[40px]}
+    
+    .product-title_2 {
+        @apply font-['Comfortaa']  bg-clip-text text-transparent 
+               text-[15px]       
+               md:text-[27px]    
+               lg:text-[23px]   
+               xl:text-[25px]    
+               leading-[1.1] uppercase tracking-wider}
+
+        .product-video {
+            @apply aspect-[4/5] overflow-hidden rounded-[25px] shadow-2xl border border-white/5 bg-neutral-900 relative }
+
+    .product-article-title1 {
+        @apply font-['Comfortaa'] text-white text-xl md:text-2xl font-medium mb-5 tracking-wide}
+
+    .product-article1 {
+        @apply text-gray-300 text-base md:text-lg leading-[1.8] font-light max-w-2xl}
+
+    .product-article-title2 {
+        @apply font-['Comfortaa'] text-white text-xl md:text-2xl font-medium mb-5 tracking-wide}
+    
+    .product-article2 {
+        @apply text-gray-300 text-base md:text-lg leading-[1.8] font-light max-w-2xl}
+    
+    .product-capsule {
+        @apply w-full max-w-[400px] h-[300px] xl:absolute xl:-right-20 xl:-bottom-20 z-20;
+    }
+}
