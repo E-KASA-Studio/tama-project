@@ -22,8 +22,8 @@ export class AppComponent implements OnInit{
   constructor(private meta: Meta) {}
 
   ngOnInit(): void {
-    if (this.isBrowser && 'scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+    if (this.isBrowser && 'scrollRestoration' in globalThis.history) {
+      globalThis.history.scrollRestoration = 'manual';
     }
 
     if (!environment.production) {
