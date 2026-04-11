@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, inject, OnInit, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-scroll-to-top-button',
@@ -6,10 +7,14 @@ import { AfterViewInit, Component, HostListener } from '@angular/core';
   templateUrl: './scroll-to-top-button.component.html',
   styleUrl: './scroll-to-top-button.component.css'
 })
-export class ScrollToTopButtonComponent implements AfterViewInit {
+export class ScrollToTopButtonComponent implements OnInit {
+  private readonly document = inject(DOCUMENT);
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly isBrowser = isPlatformBrowser(this.platformId);
+
   bottomOffsetPx = 16;
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.updateBottomOffset();
   }
 
@@ -24,8 +29,12 @@ export class ScrollToTopButtonComponent implements AfterViewInit {
   }
 
   private updateBottomOffset(): void {
-    const footer = document.querySelector('footer[aria-label="Footer"]') as HTMLElement | null;
-    const baseOffset = window.innerWidth >= 768 ? 24 : 16;
+    if (!this.isBrowser || !this.document.defaultView) {
+      return;
+    }
+
+    const footer = this.document.querySelector('footer[aria-label="Footer"]') as HTMLElement | null;
+    const baseOffset = this.document.defaultView.innerWidth >= 768 ? 24 : 16;
 
     if (!footer) {
       this.bottomOffsetPx = baseOffset;
@@ -33,7 +42,7 @@ export class ScrollToTopButtonComponent implements AfterViewInit {
     }
 
     const footerTop = footer.getBoundingClientRect().top;
-    const viewportHeight = window.innerHeight;
+    const viewportHeight = this.document.defaultView.innerHeight;
 
     if (footerTop >= viewportHeight) {
       this.bottomOffsetPx = baseOffset;
