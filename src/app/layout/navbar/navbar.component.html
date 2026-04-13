@@ -1,9 +1,11 @@
 <nav 
   class="fixed top-0 z-[1000] font-comfortaa
-  grid items-center bg-transparent border-none w-full
+  grid items-center bg-dark/65 backdrop-blur-sm w-full
+  transition-transform duration-300 ease-out
   grid-cols-[auto_1fr_auto_auto] gap-3 p-2.5 min-h-20
   md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-4 md:px-6 md:py-3 md:min-h-[74px]
-  xl:gap-6 xl:px-10 xl:py-2 xl:min-h-24 animate-fade">
+  xl:gap-6 xl:px-10 xl:py-2 xl:min-h-24 animate-fade"
+  [ngClass]="isNavbarHidden() ? '-translate-y-full' : 'translate-y-0'">
 
   <!-- Hamburger + Navigation Links -->
   <div class="flex items-center gap-4 min-w-0

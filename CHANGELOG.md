@@ -1,3 +1,8 @@
+### [tama-project-2.13.1-PATCH] - 2026-03-23 
+
+### Added 
+-  Semi-transparent BG on navbar and scroll visibility logic (Github Project[#51], PR [#60])
+
 ### [tama-project-2.13.0-RELEASE] - 2026-03-23 
 
 ### Added 
