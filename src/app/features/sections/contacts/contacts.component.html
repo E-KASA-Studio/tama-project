@@ -9,6 +9,7 @@
 
     <!-- Email -->
     <a
+      aria-label="email"
       [href]="emailHref()"
       target="_blank"
       rel="noopener noreferrer"
@@ -25,7 +26,8 @@
     </a>
 
     <!-- Phone -->
-    <a
+    <a 
+      aria-label="phone number"
       [href]="phoneHref()"
       class="phone group border-brand/30
         hover:border-brand hover:bg-brand/5">
@@ -41,6 +43,7 @@
 
     <!-- Address -->
     <a
+      aria-label="address"
       [href]="mapsHref()"
       target="_blank"
       rel="noopener noreferrer"

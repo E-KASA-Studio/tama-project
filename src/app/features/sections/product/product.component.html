@@ -28,6 +28,7 @@
               
     <aside class="product-video group">
   <video 
+    aria-label="product video"
     #productVideo
     class="w-full h-full object-cover"
     muted
@@ -61,7 +62,7 @@
       {{ 'product.article_2' | translate }}
     </p>
     
-    <aside class="product-capsule">
+    <aside aria-label="Coffee capsule" class="product-capsule">
       <model-viewer 
         [attr.src]="currentModel"
         alt="3D Coffee Capsules"
