@@ -1,3 +1,8 @@
+### [tama-project-2.13.1-PATCH] - 2026-03-23 
+
+### Added 
+-  Semi-transparent BG on navbar and scroll visibility logic (Github Project[#51], PR [#60])
+
 ### [tama-project-2.13.0-RELEASE] - 2026-03-23 
 
 ### Added 
@@ -11,7 +16,7 @@
 ### [tama-project-2.10.0-RELEASE] - 2026-03-23 
 
 ### Added 
-- Update PRODUCT section by adding video based on the provided sample (Github Project[#20], PR [#52])
+- Setup scrolling logic for landing-page.service(Github Project[#53], PR [#54])
 
 ### [tama-project-2.9.0-RELEASE] - 2026-03-23 
 
