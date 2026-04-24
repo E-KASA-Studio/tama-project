@@ -1,10 +1,9 @@
-<section class="relative text-white py-16 px-6 md:px-12 lg:px-26 font-comfortaa bg-main-radial"
-         >
+<section class="section-company font-comfortaa bg-main-radial">
 
          
          
   <div class="max-w-7xl mx-auto">
-    <h2 appScrollReveal class="font-heading bg-gold-gradient bg-clip-text text-transparent text-3xl md:text-5xl font-light mb-9 tracking-wide pb-2 border-b border-brand/30">
+    <h2 appScrollReveal class=" heading font-heading bg-gold-gradient border-brand/30">
       {{ 'company.title_1' | translate }}
     </h2>
 
@@ -13,38 +12,39 @@
       <div class="flex flex-col">
 
         <div class=" border-b border-brand/30 mb-2">
-           <h3 appScrollReveal class="font-heading bg-gold-gradient bg-clip-text text-transparent text-xl md:text-3xl opacity-90">
+           <h3 appScrollReveal class=" heading_2 font-heading bg-gold-gradient ">
               {{ 'company.title_2' | translate }}
            </h3>
         </div>
 
         
         
-        <div class="flex items-start gap-4 py-8 border-b border-brand/30">
+        <article class="flex items-start gap-4 py-8 border-b border-brand/30">
           <span class="font-heading bg-gold-gradient bg-clip-text text-transparent text-lg md:text-xl pt-1">01</span>
-          <p appScrollReveal class="text-footer-text leading-relaxed text-sm md:text-base">
+          <p appScrollReveal class="article_1 text-footer-text">
             {{ 'company.article_1' | translate }}
           </p>
-        </div>
+        </article>
 
-        <div class="flex items-start gap-4 py-8 border-b border-brand/30">
+        <article class="flex items-start gap-4 py-8 border-b border-brand/30">
           <span class="font-heading bg-gold-gradient bg-clip-text text-transparent text-lg md:text-xl pt-1">02</span>
-          <p appScrollReveal class="text-footer-text leading-relaxed text-sm md:text-base">
+          <p appScrollReveal class="article_2 text-footer-text">
             {{ 'company.article_2' | translate }}
           </p>
-        </div>
+        </article>
 
-        <div class="flex items-start gap-4 py-8 border-b border-brand/30">
+        <article class="flex items-start gap-4 py-8 border-b border-brand/30">
           <span class="font-heading bg-gold-gradient bg-clip-text text-transparent text-lg md:text-xl pt-1">03</span>
-          <p appScrollReveal class="text-footer-text leading-relaxed text-sm md:text-base">
+          <p appScrollReveal class="article_3 text-footer-text">
             {{ 'company.article_3' | translate }}
           </p>
-        </div>
+        </article>
 
       </div>
 
-      <div class="relative h-[300px] md:h-[600px] w-full flex justify-center lg:justify-end items-end pb-12">
-        <model-viewer 
+      <aside class="capsule">
+        <model-viewer
+          aria-label="Coffee capsule"
           src="image/Gold Open.glb"
           alt="3D Coffee Capsule Model"
           auto-rotate 
@@ -57,7 +57,7 @@
           class="w-full h-[300px] md:h-[600px] md:max-w-[70%] lg:max-w-[70%] outline-none -mb-10"
           style="background-color: transparent;">
         </model-viewer>
-      </div>
+      </aside>
 
     </div>
   </div>

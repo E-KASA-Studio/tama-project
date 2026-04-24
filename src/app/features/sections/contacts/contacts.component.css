@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer components { 
+    .contacts-section {
+        @apply relative z-20 w-full py-16 px-4 min-h-screen
+    md:py-24 md:px-8
+    xl:py-32 xl:px-16}
+
+    .contacts-title {
+        @apply bg-clip-text text-transparent
+    leading-[1.1] overflow-hidden w-full text-left lg:text-center
+    px-2 md:px-6 max-w-none
+    mt-[-5vw] md:mt-0
+    mb-8 md:mb-20
+    text-[7vw] sm:text-[6vw] md:text-[8vw] lg:text-[40px] xl:text-[48px] 2xl:text-[54px]}
+
+    .email {
+        @apply flex flex-col items-center justify-center p-10
+        border bg-black/20 backdrop-blur-sm
+        transition-all duration-300
+        }
+    
+    .phone {
+        @apply flex flex-col items-center justify-center p-10
+        border bg-black/20 backdrop-blur-sm
+        transition-all duration-300}
+
+    .location {
+        @apply flex flex-col items-center justify-center p-10
+        border bg-black/20 backdrop-blur-sm
+        transition-all duration-300}
+}
