@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:prod",
     "build:dev": "ng build --configuration development --output-hashing=all && node scripts/set-robots.cjs dev",
     "build:prod": "ng build --configuration production && node scripts/set-robots.cjs prod",
     "watch": "ng build --watch --configuration development",
