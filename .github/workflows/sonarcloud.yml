@@ -35,7 +35,13 @@ jobs:
 
       # Testing step. Uncomment if you have configured the generation of coverage/lcov.info
       - name: Run tests and generate coverage report
-        run: npm run test -- --no-watch --code-coverage --browsers=ChromeHeadless
+        run: npm run test -- --no-watch --code-coverage --browsers=ChromeHeadlessCI
+
+      - name: Build dev artifact and validate dev robots
+        run: npm run build:dev
+
+      - name: Validate prod robots template
+        run: node scripts/set-robots.cjs prod
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@a31c9398be7ace6bbfaf30c0bd5d415f843d45e9 #7.0.0

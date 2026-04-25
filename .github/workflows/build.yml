@@ -2,18 +2,43 @@ name: Build
 on:
   push:
     branches:
+      - main
       - develop
   pull_request:
+    branches:
+      - main
+      - develop
     types: [opened, synchronize, reopened]
 jobs:
   sonarqube:
-    name: SonarQube
-    runs-on: windows-latest
+    name: Build and SonarQube
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #6.0.2
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #6.0.2
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Run unit tests
+        run: npm test -- --watch=false --browsers=ChromeHeadlessCI
+
+      - name: Build dev artifact and validate dev robots
+        run: npm run build:dev
+
+      - name: Validate prod robots template
+        run: node scripts/set-robots.cjs prod
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@a31c9398be7ace6bbfaf30c0bd5d415f843d45e9 #7.0.0
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
