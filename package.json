@@ -1,6 +1,6 @@
 {
   "name": "tama-project",
-  "version": "2.12.0",
+  "version": "2.14.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,13 +12,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^19.2.0",
-    "@angular/compiler": "^19.2.0",
-    "@angular/core": "^19.2.0",
-    "@angular/forms": "^19.2.0",
-    "@angular/platform-browser": "^19.2.0",
-    "@angular/platform-browser-dynamic": "^19.2.0",
-    "@angular/router": "^19.2.0",
+    "@angular/common": "19.2.20",
+    "@angular/compiler": "19.2.20",
+    "@angular/core": "19.2.20",
+    "@angular/forms": "19.2.20",
+    "@angular/platform-browser": "19.2.20",
+    "@angular/platform-browser-dynamic": "19.2.20",
+    "@angular/platform-server": "19.2.20",
+    "@angular/router": "19.2.20",
+    "@angular/ssr": "19.2.20",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
     "@tailwindcss/postcss": "^4.2.1",
@@ -29,9 +31,9 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.2.0",
-    "@angular/cli": "^19.2.0",
-    "@angular/compiler-cli": "^19.2.0",
+    "@angular-devkit/build-angular": "19.2.20",
+    "@angular/cli": "19.2.20",
+    "@angular/compiler-cli": "19.2.20",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",

@@ -1,3 +1,8 @@
+### [tama-project-2.14.0-RELEASE] - 2026-04-24
+
+### Added
+- Set up SSG hydration with RU prerendered translations and updated loading placeholder gradient (Github Project[#59], PR [#64])
+
 ### [tama-project-2.13.1-PATCH] - 2026-03-23 
 
 ### Added 
