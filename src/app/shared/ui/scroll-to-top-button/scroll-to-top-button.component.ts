@@ -1,7 +1,7 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, HostListener, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Импортируем для работы директивы *ngIf
-import { CommonModule } from '@angular/common'; // Импортируем для работы директивы *ngIf
+
 
 @Component({
   selector: 'app-scroll-to-top-button',
