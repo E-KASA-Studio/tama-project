@@ -1,9 +1,10 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, inject, OnInit, PLATFORM_ID, signal } from '@angular/core';
 
 @Component({
   selector: 'app-scroll-to-top-button',
-  imports: [],
+  standalone: true,
+  imports: [], // CommonModule больше не нужен, если используем @if
   templateUrl: './scroll-to-top-button.component.html',
   styleUrl: './scroll-to-top-button.component.css'
 })
@@ -12,15 +13,25 @@ export class ScrollToTopButtonComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
-  bottomOffsetPx = 16;
+  isVisible = signal<boolean>(false);
+  bottomOffsetPx = signal<number>(16);
 
-  ngOnInit(): void {
-    this.updateBottomOffset();
-  }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (!this.isBrowser) return;
 
-  @HostListener('window:scroll')
-  onWindowScroll(): void {
-    this.updateBottomOffset();
+    const verticalOffset = window.pageYOffset 
+      || this.document.documentElement.scrollTop 
+      || this.document.body.scrollTop || 0;
+    
+    // Сначала обновляем состояние видимости
+    const shouldBeVisible = verticalOffset > 300;
+    this.isVisible.set(shouldBeVisible);
+
+    // Вызываем расчет отступа, если мы близко к концу страницы или кнопка видна
+    if (shouldBeVisible) {
+      this.updateBottomOffset();
+    }
   }
 
   @HostListener('window:resize')
@@ -28,28 +39,43 @@ export class ScrollToTopButtonComponent implements OnInit {
     this.updateBottomOffset();
   }
 
-  private updateBottomOffset(): void {
-    if (!this.isBrowser || !this.document.defaultView) {
-      return;
+  ngOnInit(): void {
+    if (this.isBrowser) {
+      this.updateBottomOffset();
     }
+  }
 
+  scrollToTop() {
+    if (this.isBrowser) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  private updateBottomOffset(): void {
+    if (!this.isBrowser) return;
+
+    // Ищем футер. Убедитесь, что селектор совпадает с тем, что в вашем HTML!
     const footer = this.document.querySelector('footer[aria-label="Footer"]') as HTMLElement | null;
-    const baseOffset = this.document.defaultView.innerWidth >= 768 ? 24 : 16;
+    const win = this.document.defaultView;
+
+    if (!win) return;
+
+    const baseOffset = win.innerWidth >= 768 ? 24 : 16;
 
     if (!footer) {
-      this.bottomOffsetPx = baseOffset;
+      this.bottomOffsetPx.set(baseOffset);
       return;
     }
 
-    const footerTop = footer.getBoundingClientRect().top;
-    const viewportHeight = this.document.defaultView.innerHeight;
+    const footerRect = footer.getBoundingClientRect();
+    const viewportHeight = win.innerHeight;
 
-    if (footerTop >= viewportHeight) {
-      this.bottomOffsetPx = baseOffset;
-      return;
+    // Если верх футера выше, чем низ экрана — значит они пересекаются
+    if (footerRect.top < viewportHeight) {
+      const overlap = viewportHeight - footerRect.top;
+      this.bottomOffsetPx.set(overlap + 16); // 16 - это дополнительный зазор от края футера
+    } else {
+      this.bottomOffsetPx.set(baseOffset);
     }
-
-    const overlapOffset = Math.ceil(viewportHeight - footerTop) + 16;
-    this.bottomOffsetPx = Math.max(baseOffset, overlapOffset);
   }
 }

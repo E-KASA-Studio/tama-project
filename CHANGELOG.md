@@ -1,3 +1,8 @@
+### [tama-project-2.15.0-RELEASE] - 2026-04-27
+
+### Added
+- Created business logic for "Go up" button (Github Project[#63], PR [#72])
+
 ### [tama-project-2.14.0-RELEASE] - 2026-04-24
 
 ### Added
