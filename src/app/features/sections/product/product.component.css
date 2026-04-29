@@ -31,13 +31,13 @@
         @apply font-['Comfortaa'] text-white text-xl md:text-2xl font-medium mb-5 tracking-wide}
 
     .product-article1 {
-        @apply text-gray-300 text-base md:text-lg leading-[1.8] font-light max-w-2xl}
+        @apply font-['Comfortaa'] text-gray-300 text-base md:text-lg leading-[1.8] font-light max-w-2xl}
 
     .product-article-title2 {
         @apply font-['Comfortaa'] text-white text-xl md:text-2xl font-medium mb-5 tracking-wide}
     
     .product-article2 {
-        @apply text-gray-300 text-base md:text-lg leading-[1.8] font-light max-w-2xl}
+        @apply font-['Comfortaa'] text-gray-300 text-base md:text-lg leading-[1.8] font-light max-w-2xl}
     
     .product-capsule {
         @apply w-full max-w-[400px] h-[300px] xl:absolute xl:-right-20 xl:-bottom-20 z-20;
