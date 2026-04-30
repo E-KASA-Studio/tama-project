@@ -9,86 +9,92 @@ describe('LanguageService', () => {
   let translate: TranslateService;
   const STORAGE_KEY = 'user_lang';
 
+  function setup() {
+    // Сервис инджектим ПОСЛЕ spy — явный порядок
+    translate = TestBed.inject(TranslateService);
+    spyOn(translate, 'use').and.returnValue(of({}));
+    return TestBed.inject(LanguageService);
+  }
+
   beforeEach(() => {
     localStorage.clear();
-
     TestBed.configureTestingModule({
       providers: [
         provideTranslateService(),
         LanguageService,
-        { provide: PLATFORM_ID, useValue: 'browser' }
-      ]
+        { provide: PLATFORM_ID, useValue: 'browser' },
+      ],
     });
-
-    translate = TestBed.inject(TranslateService);
-    spyOn(translate, 'use').and.returnValue(of({}));
   });
 
-  it('should initialize with default language (RU) when storage is empty', () => {
+  it('should initialize with RU when storage is empty', () => {
+    const service = setup();
 
-    const service = TestBed.inject(LanguageService);
-    
     expect(service.currentLanguage()).toBe(LanguageCode.RU);
-    expect(translate.use).toHaveBeenCalledWith(LanguageCode.RU);
+    expect(translate.use).toHaveBeenCalledOnceWith(LanguageCode.RU);
   });
 
-  it('should switch language correctly and save to localStorage', () => {
-    const service = TestBed.inject(LanguageService);
-    
+  it('should switch language, update signal and save to localStorage', () => {
+    const service = setup();
+    (translate.use as jasmine.Spy).calls.reset();
+
     service.switchLanguage(LanguageCode.EN);
 
     expect(service.currentLanguage()).toBe(LanguageCode.EN);
     expect(localStorage.getItem(STORAGE_KEY)).toBe(LanguageCode.EN);
-    expect(translate.use).toHaveBeenCalledWith(LanguageCode.EN);
+    expect(translate.use).toHaveBeenCalledOnceWith(LanguageCode.EN);
   });
 
   it('should read language from localStorage on startup', () => {
     localStorage.setItem(STORAGE_KEY, LanguageCode.EN);
-
-    const service = TestBed.inject(LanguageService);
+    const service = setup();
 
     expect(service.currentLanguage()).toBe(LanguageCode.EN);
-    expect(translate.use).toHaveBeenCalledWith(LanguageCode.EN);
+    expect(translate.use).toHaveBeenCalledOnceWith(LanguageCode.EN);
   });
 
   it('should fallback to RU if localStorage has invalid value', () => {
     localStorage.setItem(STORAGE_KEY, 'invalid_lang' as any);
-    
-    const service = TestBed.inject(LanguageService);
+    const service = setup();
 
     expect(service.currentLanguage()).toBe(LanguageCode.RU);
+    // ✅ Добавлена проверка translate.use
+    expect(translate.use).toHaveBeenCalledOnceWith(LanguageCode.RU);
   });
 
   describe('Server Side Environment', () => {
     beforeEach(() => {
-      // Для тестов сервера нам нужно сбросить модуль и подменить платформу
       TestBed.resetTestingModule();
       TestBed.configureTestingModule({
         providers: [
           provideTranslateService(),
           LanguageService,
-          { provide: PLATFORM_ID, useValue: 'server' }
-        ]
+          { provide: PLATFORM_ID, useValue: 'server' },
+        ],
       });
-      translate = TestBed.inject(TranslateService);
-      spyOn(translate, 'use').and.returnValue(of({}));
     });
 
-    it('should always return RU when on server platform', () => {
-      // Предварительно кладем EN в сторадж, но на сервере он должен игнорироваться
+    it('should always initialize with RU on server, ignoring localStorage', () => {
+      // localStorage здесь доступен только потому что это jsdom-среда,
+      // в реальном SSR его нет — тест проверяет логику isPlatformBrowser
       localStorage.setItem(STORAGE_KEY, LanguageCode.EN);
-      
-      const service = TestBed.inject(LanguageService);
-      
+      const service = setup();
+
       expect(service.currentLanguage()).toBe(LanguageCode.RU);
+      expect(translate.use).toHaveBeenCalledOnceWith(LanguageCode.RU);
     });
 
-    it('should not attempt to save to localStorage when on server platform', () => {
-      const service = TestBed.inject(LanguageService);
+    it('should switch language signal without saving to localStorage on server', () => {
+      const service = setup();
       const storageSpy = spyOn(localStorage, 'setItem');
-      
+      (translate.use as jasmine.Spy).calls.reset();
+
       service.switchLanguage(LanguageCode.EN);
-      
+
+      // ✅ Язык всё же переключается
+      expect(service.currentLanguage()).toBe(LanguageCode.EN);
+      expect(translate.use).toHaveBeenCalledOnceWith(LanguageCode.EN);
+      // ✅ Но localStorage не трогается
       expect(storageSpy).not.toHaveBeenCalled();
     });
   });
