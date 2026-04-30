@@ -14,7 +14,7 @@ export class ContactsComponent {
 
   private readonly emailKey = this.languageService.translationSignal('contacts.email');
   private readonly phoneKey = this.languageService.translationSignal('contacts.phone');
-  private readonly addressKey = this.languageService.translationSignal('contacts.address');
+  private readonly addressKey = this.languageService.translationSignal('contacts.addressMap');
 
   readonly emailHref = computed(() => `mailto:${this.emailKey()}`);
 
