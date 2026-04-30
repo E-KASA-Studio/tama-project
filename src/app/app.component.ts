@@ -11,15 +11,14 @@ import { environment } from '../environments/environment';
 
 
   standalone: true,
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit{
   title = 'tama-project';
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
-  constructor(private meta: Meta) {}
+  constructor(private readonly meta: Meta) {}
 
   ngOnInit(): void {
     if (this.isBrowser && 'scrollRestoration' in globalThis.history) {

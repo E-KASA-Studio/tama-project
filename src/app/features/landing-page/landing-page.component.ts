@@ -8,8 +8,7 @@ import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-landing-page',
   imports: [HeroComponent, ContactsComponent, ProductComponent, CompanyComponent],
-  templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.css'
+  templateUrl: './landing-page.component.html'
 })
 export class LandingPageComponent implements OnInit {
     private readonly viewportScroller = inject(ViewportScroller);
