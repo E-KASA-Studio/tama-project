@@ -1,10 +1,9 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Router, RouterLink, Scroll } from "@angular/router";
 import { LanguageService } from '../../core/services/language.service';
 import { AVAILABLE_LANGUAGES, LanguageCode } from '../../core/services/models/language.model';
-import { DOCUMENT } from '@angular/common'; 
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { filter } from 'rxjs';
 
