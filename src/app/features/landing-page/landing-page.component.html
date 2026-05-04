@@ -14,12 +14,12 @@
 </section>
 
 <section id="product" class="scroll-mt-[60px]" #productTrigger>
-  @defer (on viewport; on interaction(productTrigger); prefetch on idle) {
+  @defer (on idle; prefetch on idle) {
     <app-product />
   } @placeholder {
     <div class="min-h-screen bg-main-radial"></div>
   }
-</section>
+</section> 
 
 <section id="contacts" class="scroll-mt-[60px]" #contactsTrigger>
   @defer (on viewport; on interaction(contactsTrigger)) {
