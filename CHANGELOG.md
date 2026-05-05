@@ -1,3 +1,8 @@
+### [tama-project-2.15.1-PATCH] - 2026-05-04
+
+### Added
+- Fix bug for anchor scrolling in contacts section (Github Project[#73], PR [#78])
+
 ### [tama-project-2.15.0-RELEASE] - 2026-04-27
 
 ### Added

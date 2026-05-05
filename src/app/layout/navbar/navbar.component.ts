@@ -1,9 +1,11 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink, Scroll } from "@angular/router";
 import { LanguageService } from '../../core/services/language.service';
 import { AVAILABLE_LANGUAGES, LanguageCode } from '../../core/services/models/language.model';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { filter } from 'rxjs';
 
 
 @Component({
@@ -23,6 +25,23 @@ export class NavbarComponent {
   isMenuOpen = signal(false);
   isNavbarHidden = signal(false);
   currentLanguage = signal<'en' | 'ru'>('en');
+  private readonly router = inject(Router);
+  private readonly document = inject(DOCUMENT);
+
+  constructor() {
+  this.router.events.pipe(
+    filter(e => e instanceof Scroll),
+    takeUntilDestroyed()
+  ).subscribe((e: Scroll) => {
+    if (e.anchor) {
+      const anchor = e.anchor;
+      setTimeout(() => {
+        this.document.getElementById(anchor)
+  ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 600);
+    }
+  });
+}
 
   toggleMenu() {
     this.isMenuOpen.update(state => !state);
