@@ -1,21 +1,27 @@
-<footer aria-label="Footer" class="relative -mt-[101px] z-30 w-full bg-transparent font-comfortaa">
-  <div class=" w-full px-6 py-6
-    flex flex-row items-center justify-between gap-4 flex-nowrap
-    md:h-[101px] md:px-12 md:py-0">
+<footer aria-label="Footer" class="relative z-30 w-full bg-main-radial font-comfortaa">
+  <!-- 
+    1. Убрали отрицательный маржин, добавили bg-dark, чтобы не было белого.
+    2. Используем flex-row и justify-between, чтобы разнести лого и текст.
+    3. items-start поможет, если текст адреса станет очень длинным.
+  -->
+  <div class="w-full px-4 py-6 flex flex-row items-start justify-between gap-2 md:px-12 md:h-[101px] md:items-center">
 
-    <!-- Logo -->
-    <div aria-label="TAMA CAPS logo"
-      class="shrink-0 flex items-center justify-center md:justify-self-start">
+    <!-- Logo: shrink-0 важен, чтобы текст не сдавливал логотип -->
+    <div aria-label="TAMA CAPS logo" class="shrink-0">
       <img src="tama-caps-logo.png" alt="TAMA CAPS"
-        class="w-[72px] h-16 object-cover" />
+        class="w-[60px] h-auto object-contain md:w-[72px]" />
     </div>
 
-    <!-- Contact Info -->
-    <div class="shrink-0 flex flex-col items-end gap-0.5 text-brand text-footer-ink text-[11px] leading-normal font-bold text-right">
-      <p>TAMA CAPS, Ltd</p>
-      <p>{{ 'contacts.address' | translate }}</p>
-      <p>{{ 'contacts.email' | translate }}</p>
-      <!-- <p>+XX XXX XX XX XX</p> -->
+    <!-- Contact Info: min-w-0 и break-words заставят адрес переноситься, а не растягивать экран -->
+    <div class="min-w-0 flex flex-col items-end gap-0.5 text-brand text-[10px] leading-tight font-bold text-right md:text-[11px]">
+      <p class="whitespace-nowrap">TAMA CAPS, Ltd</p>
+      
+      <!-- Этот блок теперь будет переноситься внутри отведенного места -->
+      <p class="whitespace-normal break-words w-full">
+        {{ 'contacts.address' | translate }}
+      </p>
+      
+      <p class="truncate w-full">{{ 'contacts.email' | translate }}</p>
     </div>
 
   </div>
