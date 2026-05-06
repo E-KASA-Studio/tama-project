@@ -1,3 +1,8 @@
+### [tama-project-2.15.2-PATCH] - 2026-05-06
+
+### Added
+- Fix bug for footer (PR [#79])
+
 ### [tama-project-2.15.1-PATCH] - 2026-05-04
 
 ### Added
