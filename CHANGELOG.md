@@ -1,3 +1,8 @@
+### [tama-project-2.16.0-RELEASE] - 2026-05-6
+
+### Added
+- Added robots.txt for dev and prod environments, SEO-optimized (Github Project[#67], PR [#80])
+
 ### [tama-project-2.15.2-PATCH] - 2026-05-06
 
 ### Added
