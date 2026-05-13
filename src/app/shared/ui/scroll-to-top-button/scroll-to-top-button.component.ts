@@ -5,8 +5,7 @@ import { Component, HostListener, inject, OnInit, PLATFORM_ID, signal } from '@a
   selector: 'app-scroll-to-top-button',
   standalone: true,
   imports: [], // CommonModule больше не нужен, если используем @if
-  templateUrl: './scroll-to-top-button.component.html',
-  styleUrl: './scroll-to-top-button.component.css'
+  templateUrl: './scroll-to-top-button.component.html'
 })
 export class ScrollToTopButtonComponent implements OnInit {
   private readonly document = inject(DOCUMENT);

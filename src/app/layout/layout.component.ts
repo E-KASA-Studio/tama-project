@@ -8,8 +8,7 @@ import { ScrollToTopButtonComponent } from '../shared/ui/scroll-to-top-button/sc
   selector: 'app-layout',
   standalone: true,
   imports: [NavbarComponent, FooterComponent, LandingPageComponent, ScrollToTopButtonComponent],
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  templateUrl: './layout.component.html'
 })
 export class LayoutComponent {
 
