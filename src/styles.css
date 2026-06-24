@@ -119,3 +119,11 @@ html {
   opacity: 1 !important;
   transform: translateY(0);
 }
+
+body {
+  font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #3B3B3B 5%, #101010 78%);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}

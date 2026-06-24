@@ -1,0 +1,12 @@
+@if (visible) {
+<div class="cookie-banner">
+  <div class="content">
+<div [innerHTML]="'cookie.message' | translate"></div>
+
+    <button (click)="accept()">
+      {{ 'cookie.accept' | translate }}
+
+    </button>
+  </div>
+</div>
+}

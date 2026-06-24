@@ -1,0 +1,47 @@
+/* Хорошая практика: предотвращает вылезание элементов за границы из-за padding */
+* {
+  box-sizing: border-box;
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  /* Заставляем баннер растягиваться на всю ширину экрана */
+  width: 100%; 
+  
+  display: flex;
+  justify-content: center;
+  
+  padding: 0 16px;
+  z-index: 9999;
+}
+
+.content {
+  width: 100%;
+  /* На мобильных он займет всю ширину (минус padding), а на десктопе не станет больше 520px */
+  max-width: 520px; 
+
+  background: #1f1f1f;
+  color: white;
+  padding: 16px 18px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
