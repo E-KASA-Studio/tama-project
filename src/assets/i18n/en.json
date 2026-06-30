@@ -34,6 +34,70 @@
     "contacts": "Contacts",
     "company": "Company",
     "product": "Product"
-  }
+  },
+  "cookie": {
+    "message": "We use cookies to improve your experience on our site. Learn more about our <a href='/privacy-policy'><strong><u>Privacy Policy</u></strong></a>",
+    "accept": "Ok"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdatedValue": "24/06/2026",
+
+    "intro": "This Privacy Policy explains how information is handled when using the website",
+    "introEnd": "(the “Website”).",
+
+    "section1": {
+      "title": "1. General Information",
+      "text": "This website is provided for informational purposes only and is intended to present information about the Company and its services to users. The website does not provide for:",
+      "item1": "user registration",
+      "item2": "personal accounts",
+      "item3": "contact forms",
+      "item4": "online payments or orders"
+    },
+
+    "section2": {
+      "title": "2. Information We Collect",
+      "text": "The website does not collect or store personal data such as:",
+      "item1": "full name",
+      "item2": "phone number",
+      "item3": "email address",
+      "item4": "postal address",
+      "item5": "any identifying data"
+    },
+
+    "section3": {
+      "title": "3. Cookies & Local Storage",
+      "text": "The website may use cookies or browser local storage technologies solely for the purpose of:",
+      "item1": "remembering the user's language preference language preference",
+      "item2": "ensuring proper display and functionality of the website",
+      "item3": "Such information is not used to identify individual users"
+    },
+
+    "section4": {
+      "title": "4. Third-party Services",
+      "text": "The website may include third-party services, including",
+      "item1": "Google Maps",
+      "item2": "When Google Maps is displayed, Google may automatically collect certain technical information, such as IP address, browser information, and device data, in accordance with Google's own privacy practices.",
+      "item3": "Google's Privacy Policy is available on the link below"
+      
+    },
+
+    "section5": {
+      "title": "5. Security",
+      "text": "Reasonable measures are taken to maintain the security and integrity of the website."
+    },
+
+    "section6": {
+      "title": "6. Policy Changes",
+      "text": "This Privacy Policy may be updated from time to time. The latest version will always be available on this page."
+    },
+
+    "section7": {
+      "title": "7. Contact",
+      "text": "For questions regarding this website, please contact: info@tamacaps.kz"
+    }
+  },
+  "privacyLink": "<a href='/privacy-policy'>Privacy Policy</a>"
 
 }

@@ -1,3 +1,8 @@
+### [tama-project-2.17.0-RELEASE] - 2026-06-24
+
+### Added
+- Added cookie consent banner and multilingual Privacy Policy page with routing support. ( PR [#84])
+
 ### [tama-project-2.16.0-RELEASE] - 2026-05-6
 
 ### Added
