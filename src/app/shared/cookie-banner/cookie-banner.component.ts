@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslatePipe} from '@ngx-translate/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { Component, afterNextRender } from '@angular/core';
+import { TranslatePipe, TranslateModule} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-cookie-banner',
@@ -9,12 +9,14 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './cookie-banner.component.css',
   imports: [TranslateModule, TranslatePipe]
 })
-export class CookieBannerComponent implements OnInit {
+export class CookieBannerComponent {
 
   visible = false;
 
-  ngOnInit(): void {
-    this.visible = !localStorage.getItem('cookie-consent');
+  constructor() {
+    afterNextRender(() => {
+      this.visible = !localStorage.getItem('cookie-consent');
+    });
   }
 
   accept(): void {
