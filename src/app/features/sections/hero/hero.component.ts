@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { TranslateService, TranslatePipe} from '@ngx-translate/core';
+import { Component, inject, signal } from '@angular/core';
+import { TranslatePipe} from '@ngx-translate/core';
+import { LanguageService } from '../../../core/services/language.service';
 
 
 @Component({
@@ -9,5 +10,7 @@ import { TranslateService, TranslatePipe} from '@ngx-translate/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
+  protected readonly langService = inject(LanguageService);
   
+  readonly isLoaded = this.langService.isLoaded;
 }
