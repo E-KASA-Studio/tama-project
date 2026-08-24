@@ -1,4 +1,4 @@
-import { inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
+import { afterNextRender, inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
 import { TranslateService } from "@ngx-translate/core";
 import { LanguageCode, AVAILABLE_LANGUAGES } from "./models/language.model";
 import { isPlatformBrowser } from '@angular/common';
@@ -18,9 +18,21 @@ export class LanguageService {
 
   readonly currentLanguage = signal<LanguageCode>(this.getInitialLang());
 
+  readonly isLoaded = signal(false);
+
   constructor() {
     this.translate.use(this.currentLanguage());
+
+    afterNextRender(async () => {
+      if (this.isBrowser && 'fonts' in document) {
+        await document.fonts.ready;
+      }
+      this.isLoaded.set(true);
+    });
+  
   }
+
+  
 
   getInitialLang(): LanguageCode {
     if (!this.isBrowser) {

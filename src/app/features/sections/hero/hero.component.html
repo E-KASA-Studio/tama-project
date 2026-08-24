@@ -7,7 +7,11 @@ class="hero_bg">
 
 <h1 class=" mt-10 font-heading leading-[1.0] tracking-widest uppercase
 bg-gold-gradient bg-clip-text text-transparent
-flex flex-col items-end animate-slide-up pb-4 md:py-4 px-8 animate-fade">
+flex flex-col items-end pb-4 md:py-4 px-8 opacity-0"
+[class.opacity-0]="!isLoaded()"
+[class.animate-fade]="isLoaded()"
+>
+
 
 <span class="text-[25vw] md:text-[10rem] lg:text-[12rem]">
 TAMA
@@ -19,9 +23,10 @@ CAPS
 
 </h1>
 
-<p class="subtitle font-accent 
-bg-gold-gradient 
-panimate-fade-in-delay animate-fade">
+<p class="subtitle font-accent bg-gold-gradient opacity-0"
+[class.animate-fade]="isLoaded()"
+[class.opacity-0]="!isLoaded()"
+>
 
 {{ 'nav.subtitle' | translate }}
 

@@ -42,6 +42,7 @@ export class NavbarComponent {
     }
   });
 }
+  readonly isLoaded = this.languageService.isLoaded;
 
   toggleMenu() {
     this.isMenuOpen.update(state => !state);
